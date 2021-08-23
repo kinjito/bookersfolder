@@ -1,0 +1,8 @@
+<%= form_with model: @book, local:true do|f| %>
+  <h3>Title</h3>
+  <%= f.text_field :title %>
+  <h3>Body</h3>
+  <%= f.text_field :body %>
+<% end %>
+ <%= link_to 'Edit', @book%>
+ <%= link_to 'Back', books_path %>
