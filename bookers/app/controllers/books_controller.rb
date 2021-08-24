@@ -12,14 +12,6 @@ class BooksController < ApplicationController
   
   def edit
      @book= Book.find(params[:id])
-    # @books = Book.new
-    # if @book.save
-    #   redirect_to @book,notice: 'Book was successfully created'
-    # else
-    #       @book = Book.all
-    #       render :edit
-    # end
-    
   end
   
 
@@ -40,7 +32,6 @@ class BooksController < ApplicationController
     if @book.update(book_params)
       redirect_to @book,notice: 'Book was successfully created'
     else
-      # @book = Book.all
       render :edit
     end
   end
